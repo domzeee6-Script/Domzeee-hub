@@ -1,0 +1,288 @@
+```html
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMZEEE SCRIPTS - Roblox Script Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Kantumruy Pro', sans-serif;
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+        
+        /* RGB Animated Text Effect */
+        .rgb-text {
+            background: linear-gradient(90deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bf7, #7a00ff, #ff00c8, #ff0000);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: rgbShift 3s linear infinite;
+            font-weight: 800;
+        }
+        @keyframes rgbShift {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-900 via-emerald-600 to-teal-800 text-white text-xs font-semibold py-1.5 overflow-hidden shadow-md">
+        <marquee behavior="scroll" direction="left" scrollamount="6" class="tracking-wide">
+            🔥 Welcome to DOMZEEE Script Hub! Make By Domzeee • Fast & Reliable Roblox Scripts • Updated Daily! 🔥
+        </marquee>
+    </div>
+
+    <!-- Active Version Badge Section -->
+    <div class="bg-slate-950/80 border-b border-slate-800/80 py-2 text-center">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-blue-950/60 border border-blue-500/40 shadow-[0_0_15px_rgba(56,189,248,0.25)]">
+            <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+            </span>
+            <span class="text-xs sm:text-sm font-black tracking-wider bg-gradient-to-r from-cyan-400 via-sky-200 to-white text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">
+                Roblox Deltav2.745.apk Now Active
+            </span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-3 sm:px-8 py-3 shadow-lg">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-2.5 min-w-0">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold text-lg sm:text-xl shadow-lg shadow-emerald-500/20">
+                    <i class="fa-solid me-0.5 fa-code"></i>
+                </div>
+                <div class="truncate">
+                    <h1 class="text-base sm:text-lg font-black tracking-wide text-white">
+                        DOMZEEE
+                    </h1>
+                    <p class="text-[10px] sm:text-xs text-slate-400 font-medium truncate">Best Roblox & Game Scripts</p>
+                </div>
+            </div>
+
+            <!-- Header Action Buttons -->
+            <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
+                <!-- Donate Button -->
+                <button onclick="openDonateModal()" class="flex items-center space-x-1 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs sm:text-sm font-bold transition duration-200 shadow-md">
+                    <i class="fa-solid fa-mug-hot text-amber-400"></i>
+                    <span>Donate</span>
+                </button>
+
+                <!-- Telegram Direct Icon Button -->
+                <a href="https://t.me/domzeeeeeeeee" target="_blank" rel="noopener noreferrer" 
+                   class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/30 flex items-center justify-center transition duration-200 text-base sm:text-lg shadow-md"
+                   title="Contact Telegram @domzeeeeeeeee">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-8 py-6 sm:py-8 flex-1 w-full overflow-hidden">
+
+        <!-- Hero Section -->
+        <div class="relative bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40 rounded-2xl sm:rounded-3xl p-5 sm:p-10 border border-slate-800 shadow-2xl overflow-hidden mb-8 sm:mb-10">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3 sm:mb-4">
+                    <i class="fa-solid fa-bolt text-xs"></i>
+                    <span>Free & Updated Scripts</span>
+                </span>
+                <h2 class="text-xl sm:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3">
+                    ស្វែងរក និងទាញយក Script ដោយឥតគិតថ្លៃ
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-base leading-relaxed mb-5">
+                    អ្នកអាច Copy យកទៅ Paste ប្រើប្រាស់ក្នុង Roblox Executor ឬមើលព័ត៌មានលម្អិតរបស់ Script នីមួយៗនៅខាងក្រោមនេះ។
+                </p>
+
+                <!-- Search Bar -->
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="searchInput" onkeyup="filterScripts()" placeholder="ស្វែងរក Script..." 
+                           class="w-full bg-slate-950/80 border border-slate-700/80 rounded-2xl pl-11 pr-4 py-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition duration-200">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="flex items-center justify-between mb-6 gap-2">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-fire text-amber-500 text-sm sm:text-base"></i>
+                <h3 class="text-base sm:text-xl font-bold text-white tracking-wide">Script កំពុងពេញនិយម</h3>
+            </div>
+            <span class="text-[11px] sm:text-xs font-medium text-slate-400 bg-slate-800/60 px-2.5 sm:px-3 py-1 rounded-full border border-slate-700/50 shrink-0">
+                សរុប <span id="scriptCount" class="text-emerald-400 font-bold">11</span>
+            </span>
+        </div>
+
+        <!-- Scripts Grid -->
+        <div id="scriptsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: Tenshi Script (NYX) -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-lock-open text-xs me-1"></i> No Key
+                        </span>
+                        <span class="text-xs rgb-text">Steal an Egg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">Tenshi Script (NYX)</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Script សម្រាប់ហ្គេម Roblox មានមុខងារ Autofarm និង Auto Steal ដំណើរការយ៉ាងលឿន និងស្អាតជំនាញ។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://raw.githubusercontent.com/s1211/Tenshi-script/main/NYX.lua"))()' 
+                               class="w-full bg-transparent text-emerald-400 font-mono text-xs focus:outline-none custom-scrollbar overflow-x-auto select-all">
+                    </div>
+                </div>
+                <button onclick="copyToClipboard('loadstring(game:HttpGet(\&quot;https://raw.githubusercontent.com/s1211/Tenshi-script/main/NYX.lua\&quot;))()', this)" 
+                        class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Script</span>
+                </button>
+            </div>
+
+            <!-- Card 2: ZeroIn Hub -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-key text-xs me-1"></i> Need Key
+                        </span>
+                        <span class="text-xs rgb-text">Steal an Egg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">ZeroIn Hub</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        ZeroIn Hub មានមុខងារ Auto Steal, God Mode, Anti Knock Back និង Instant Carry យ៉ាងសំបូរបែប។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://raw.githubusercontent.com/ZeroInHub/Script/main/Loader.lua"))()' 
+                               class="w-full bg-transparent text-emerald-400 font-mono text-xs focus:outline-none custom-scrollbar overflow-x-auto select-all">
+                    </div>
+                </div>
+                <button onclick="copyToClipboard('loadstring(game:HttpGet(\&quot;https://raw.githubusercontent.com/ZeroInHub/Script/main/Loader.lua\&quot;))()', this)" 
+                        class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Script</span>
+                </button>
+            </div>
+
+            <!-- Card 3: Chilli Hub -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-lock-open text-xs me-1"></i> No Key
+                        </span>
+                        <span class="text-xs rgb-text">Steal an Egg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">Chilli Hub - Steal Egg</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Chilli Hub កំណែទម្រង់ខ្លាំងក្លា មាន GUI ងាយស្រួលបញ្ជា Auto Farm Coins & Steal Egg យ៉ាងរលូន។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()' 
+                               class="w-full bg-transparent text-emerald-400 font-mono text-xs focus:outline-none custom-scrollbar overflow-x-auto select-all">
+                    </div>
+                </div>
+                <button onclick="copyToClipboard('loadstring(game:HttpGet(\&quot;https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua\&quot;))()', this)" 
+                        class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Script</span>
+                </button>
+            </div>
+
+            <!-- Card 4: Chilli Hub - MM2 -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-lock-open text-xs me-1"></i> No Key
+                        </span>
+                        <span class="text-xs rgb-text">Murder Mystery 2</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">Chilli Hub - MM2</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Script សម្រាប់ Murder Mystery 2 មាន Auto Farm Coins, Avoid Murderer, ESP, Silent Aim និង Teleport។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()' 
+                               class="w-full bg-transparent text-emerald-400 font-mono text-xs focus:outline-none custom-scrollbar overflow-x-auto select-all">
+                    </div>
+                </div>
+                <button onclick="copyToClipboard('loadstring(game:HttpGet(\&quot;https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua\&quot;))()', this)" 
+                        class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Script</span>
+                </button>
+            </div>
+
+            <!-- Card 5: Teddy Hub (Blox Fruits) -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-lock-open text-xs me-1"></i> No Key
+                        </span>
+                        <span class="text-xs rgb-text">Blox Fruits</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">Teddy Hub</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Script Blox Fruits ស៊េរីថ្មី មានមុខងារ Level Farm, Sea Event, Stack Farming, Fruit & Raid និង Hop Katakuri។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://raw.githubusercontent.com/teddyhubdev/diepvy/refs/heads/main/TeddyHub.lua"))()' 
+                               class="w-full bg-transparent text-emerald-400 font-mono text-xs focus:outline-none custom-scrollbar overflow-x-auto select-all">
+                    </div>
+                </div>
+                <button onclick="copyToClipboard('loadstring(game:HttpGet(\&quot;https://raw.githubusercontent.com/teddyhubdev/diepvy/refs/heads/main/TeddyHub.lua\&quot;))()', this)" 
+                        class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Copy Script</span>
+                </button>
+            </div>
+
+            <!-- Card 6: Arvyn Scripts (Blox Fruits) -->
+            <div class="script-card bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between transition duration-300 hover:shadow-xl hover:shadow-emerald-500/5 group">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                            <i class="fa-solid fa-lock-open text-xs me-1"></i> No Key
+                        </span>
+                        <span class="text-xs rgb-text">Blox Fruits</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition mb-2">Arvyn Scripts</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Script Blox Fruits ជំនាន់ចុងក្រោយ Auto Farm & General, Mastery Farm, Boss Farm និង Teleport ដំណើរការលឿន។
+                    </p>
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 mb-4">
+                        <input type="text" readonly value='loadstring(game:HttpGet("https://api.luasentry.com/api/scripts/loader/e664cbd4c071c95381797367d7444a7
